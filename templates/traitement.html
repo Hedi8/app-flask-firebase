@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+     <form method="POST" action="/traitement">
+        <h2>Traitement</h2>
+        <div class="form-control">
+            <label for="etat">est ce que l'etat de cette vache est grave ? </label>
+            <input type="text" name="etat" placeholder="post title">
+        </div>
+          <div class="form-control">
+            <label for="deplacement">est ce que vous devais se deplacer? </label>
+            <input type="text" name="deplacement" placeholder="post title">
+        </div>
+          <div class="form-control">
+            <label for="ordonance">Ordonnence:</label>
+            <textarea name="ordonance" placeholder="post body content"></textarea>
+        </div>
+
+
+        <input type="submit" value="envoyer">
+    </form>
+
+{% endblock%}

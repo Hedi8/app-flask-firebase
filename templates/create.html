@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+     <form method="POST" action="/create">
+        <h2>ajouter une vache</h2>
+        <div class="form-control">
+            <label for="num">Post title:</label>
+            <input type="text" name="num" placeholder="post title">
+        </div>
+
+        <div class="form-control">
+            <label for="image">Post content:</label>
+            <textarea name="image" placeholder="post body content"></textarea>
+        </div>
+        <input type="submit" value="Create">
+    </form>
+
+{% endblock%}

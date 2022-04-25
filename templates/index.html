@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+    <br/>
+      <div class="jumbotron">
+          <h1>Login</h1>
+        <hr class="my-4">
+        {% if smessage %}
+          <div class="alert alert-success">
+            {{ smessage }}
+          </div>
+        {% endif %}
+        {% if umessage %}
+          <div class="alert alert-danger">
+            {{ umessage }}
+          </div>
+        {% endif %}
+         <div class="agile_mail_grids">
+				<div class="agile_mail_grid">
+					<form action="/index" method="post">
+						<div class="col-md-6 agile_mail_grid_left">
+							<input type="text" name="name" placeholder="Email" required="">
+							<input type="text" name="password" placeholder="Password" required="">
+						</div>
+						<input type="submit" value="Login">
+					</form>
+				</div>
+			</div>
+
+        <div class="row">
+          <div class="col-sm">
+            <a href="/forgot_password" class="text-decoration-none">Forgot Password</a>
+          </div>
+          <div class="col-sm">
+            <a href="/create_account" class="text-decoration-none">Create Account</a>
+          </div>
+        </div>
+
+     </div>
+
+{% endblock %}

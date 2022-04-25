@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+    <br/>
+      <div class="jumbotron">
+        <h1 class="display-4">Hey</h1>
+        <p class="lead">Welcome Home</p>
+        <hr class="my-4">
+     </div>
+    <div class="container-fluid">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">Num Vache</th>
+                          <th scope="col">Ambient Temp</th>
+                          <th scope="col">Target Temp</th>
+                          <th scope="col">image</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                       {% for l in t %}
+                        <tr>
+                          <td>{{l.num}}</td>
+                          <td>{{l.ambientTemp}}</td>
+                          <td>{{l.targetTemp}}</td>
+                            <td>
+                              <a href="/photos/{{l.image}}" >photo</a>
+                           </td>
+                        </tr>
+                        {% endfor %}
+                      </tbody>
+                    </table>
+            </li>
+        </ul>
+    </div>
+
+
+{% endblock %}

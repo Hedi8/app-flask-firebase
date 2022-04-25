@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+    <br/>
+      <div class="jumbotron">
+        <h1 class="display-4">Hey</h1>
+        <p class="lead">Create an account, then you can log in with it!</p>
+        <hr class="my-4">
+        {% if smessage %}
+          <div class="alert alert-success">
+            {{ smessage }}
+          </div>
+        {% endif %}
+        {% if umessage %}
+          <div class="alert alert-danger">
+            {{ umessage }}
+          </div>
+        {% endif %}
+          <div class="agile_mail_grids">
+				<div class="agile_mail_grid">
+					<form action="/create_account" method="post">
+						<div class="col-md-6 agile_mail_grid_left">
+							<input type="text" name="name" placeholder="Email" required="">
+							<input type="text" name="password" placeholder="Password" required="">
+						</div>
+						<input type="submit" value="Submit Now">
+					</form>
+				</div>
+			</div>
+     </div>
+
+{% endblock %}
